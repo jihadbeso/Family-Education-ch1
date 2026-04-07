@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الفصل الأول – التربية الأسرية</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1410;
+    --ink2: #3d3025;
+    --sand: #f5f0e8;
+    --sand2: #ede6d6;
+    --sand3: #e0d5c0;
+    --gold: #b8922a;
+    --gold2: #d4a93a;
+    --rust: #8b3a2a;
+    --teal: #2a6b6e;
+    --teal2: #3a8a8e;
+    --muted: #6b5d4f;
+    --accent: #c4523a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Tajawal', sans-serif;
+    background: var(--sand);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.8;
+    background-image:
+      radial-gradient(ellipse at 10% 0%, rgba(184,146,42,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 90% 100%, rgba(42,107,110,0.08) 0%, transparent 50%);
+  }
+
+  /* ───── HEADER ───── */
+  .hero {
+    background: var(--ink);
+    color: var(--sand);
+    padding: 60px 40px 50px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(184,146,42,0.03) 40px, rgba(184,146,42,0.03) 80px),
+      repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(184,146,42,0.03) 40px, rgba(184,146,42,0.03) 80px);
+  }
+  .hero-badge {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold2);
+    font-size: 12px;
+    letter-spacing: 3px;
+    padding: 5px 20px;
+    margin-bottom: 22px;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 500;
+  }
+  .hero h1 {
+    font-family: 'Amiri', serif;
+    font-size: clamp(32px, 6vw, 54px);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 12px;
+    color: var(--sand);
+  }
+  .hero h1 span { color: var(--gold2); }
+  .hero-sub {
+    font-size: 15px;
+    color: rgba(245,240,232,0.6);
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+  .hero-divider {
+    width: 80px; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat-num {
+    font-family: 'Amiri', serif;
+    font-size: 28px;
+    color: var(--gold2);
+    display: block;
+  }
+  .hero-stat-label {
+    font-size: 12px;
+    color: rgba(245,240,232,0.5);
+    font-weight: 300;
+  }
+
+  /* ───── LAYOUT ───── */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* ───── SECTION HEADERS ───── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 56px 0 28px;
+  }
+  .section-num {
+    width: 48px; height: 48px;
+    background: var(--ink);
+    color: var(--gold2);
+    font-family: 'Amiri', serif;
+    font-size: 20px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-family: 'Amiri', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--ink);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 6px;
+    flex: 1;
+  }
+
+  /* ───── PROSE ───── */
+  .prose {
+    font-size: 15.5px;
+    line-height: 1.9;
+    color: var(--ink2);
+    margin-bottom: 20px;
+  }
+  .prose strong { color: var(--ink); font-weight: 700; }
+
+  /* ───── HIGHLIGHT BOX ───── */
+  .highlight-box {
+    border-right: 4px solid var(--gold);
+    background: rgba(184,146,42,0.07);
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .highlight-box p { margin: 0; font-size: 15px; color: var(--ink2); }
+  .highlight-box .label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .info-box {
+    border-right: 4px solid var(--teal);
+    background: rgba(42,107,110,0.07);
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .info-box .label { color: var(--teal); }
+
+  .warning-box {
+    border-right: 4px solid var(--accent);
+    background: rgba(196,82,58,0.07);
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .warning-box .label { color: var(--accent); }
+
+  /* ───── THINKER CARDS ───── */
+  .thinkers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .thinker-card {
+    background: white;
+    border: 1px solid var(--sand3);
+    border-top: 3px solid var(--gold);
+    padding: 18px;
+    border-radius: 0 0 8px 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .thinker-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(26,20,16,0.1);
+  }
+  .thinker-name {
+    font-family: 'Amiri', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .thinker-quote {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.7;
+    border-right: 2px solid var(--sand3);
+    padding-right: 10px;
+  }
+
+  /* ───── TYPES GRID ───── */
+  .types-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .type-card {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid;
+  }
+  .type-card.maqsood {
+    background: rgba(42,107,110,0.06);
+    border-color: rgba(42,107,110,0.25);
+  }
+  .type-card.ghair {
+    background: rgba(184,146,42,0.06);
+    border-color: rgba(184,146,42,0.25);
+  }
+  .type-icon {
+    font-size: 22px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .type-title {
+    font-family: 'Amiri', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .maqsood .type-title { color: var(--teal); }
+  .ghair .type-title { color: var(--gold); }
+  .type-desc { font-size: 13.5px; color: var(--muted); line-height: 1.7; }
+
+  /* ───── DOMAINS WHEEL ───── */
+  .domains-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 14px;
+    margin: 20px 0;
+  }
+  .domain-card {
+    background: white;
+    border: 1px solid var(--sand3);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: default;
+  }
+  .domain-card:hover {
+    border-color: var(--gold);
+    background: rgba(184,146,42,0.04);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(184,146,42,0.12);
+  }
+  .domain-icon {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    margin: 0 auto 10px;
+  }
+  .domain-name {
+    font-family: 'Amiri', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .domain-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+  /* ───── FUNCTIONS LIST ───── */
+  .functions-list {
+    counter-reset: fn;
+    list-style: none;
+    margin: 20px 0;
+  }
+  .functions-list li {
+    counter-increment: fn;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--sand3);
+  }
+  .functions-list li:last-child { border-bottom: none; }
+  .fn-num {
+    width: 36px; height: 36px;
+    background: var(--ink);
+    color: var(--gold2);
+    font-family: 'Amiri', serif;
+    font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    border-radius: 4px;
+  }
+  .fn-content {}
+  .fn-title {
+    font-family: 'Amiri', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .fn-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  /* ───── PATTERN CARDS ───── */
+  .patterns-grid {
+    display: grid;
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .pattern-card {
+    background: white;
+    border: 1px solid var(--sand3);
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 6px 1fr;
+  }
+  .pattern-stripe { }
+  .pattern-body { padding: 18px 20px; }
+  .pattern-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .pattern-badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+  .pattern-name {
+    font-family: 'Amiri', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .pattern-desc { font-size: 14px; color: var(--muted); margin-bottom: 10px; line-height: 1.7; }
+  .pattern-traits {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-bottom: 10px;
+  }
+  .trait {
+    font-size: 11.5px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--sand2);
+    color: var(--muted);
+  }
+  .pattern-effect {
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    line-height: 1.6;
+  }
+
+  .p-sultawi .pattern-stripe { background: #c0392b; }
+  .p-sultawi .pattern-badge { background: rgba(192,57,43,0.1); color: #c0392b; }
+  .p-sultawi .pattern-effect { background: rgba(192,57,43,0.07); color: #8b2a1f; }
+
+  .p-mutasahel .pattern-stripe { background: #e67e22; }
+  .p-mutasahel .pattern-badge { background: rgba(230,126,34,0.1); color: #e67e22; }
+  .p-mutasahel .pattern-effect { background: rgba(230,126,34,0.07); color: #a05a18; }
+
+  .p-mubta3d .pattern-stripe { background: #7f8c8d; }
+  .p-mubta3d .pattern-badge { background: rgba(127,140,141,0.1); color: #5d6d6e; }
+  .p-mubta3d .pattern-effect { background: rgba(127,140,141,0.07); color: #4a5a5b; }
+
+  .p-mu3tadel .pattern-stripe { background: #27ae60; }
+  .p-mu3tadel .pattern-badge { background: rgba(39,174,96,0.1); color: #1e8449; }
+  .p-mu3tadel .pattern-effect { background: rgba(39,174,96,0.07); color: #1a7a42; }
+
+  /* ───── METHODS ───── */
+  .methods-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 14px;
+    margin: 20px 0;
+  }
+  .method-card {
+    background: white;
+    border: 1px solid var(--sand3);
+    border-radius: 8px;
+    padding: 18px 16px;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  .method-card:hover {
+    border-color: var(--teal2);
+    box-shadow: 0 4px 16px rgba(42,107,110,0.1);
+  }
+  .method-num {
+    width: 36px; height: 36px;
+    background: var(--teal);
+    color: white;
+    border-radius: 50%;
+    font-family: 'Amiri', serif;
+    font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 10px;
+  }
+  .method-name {
+    font-family: 'Amiri', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .method-desc { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+
+  /* ───── SPECIAL NEEDS ───── */
+  .sn-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .sn-card {
+    background: white;
+    border: 1px solid var(--sand3);
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .sn-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--rust);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .sn-title::before {
+    content: '';
+    width: 8px; height: 8px;
+    background: var(--rust);
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .sn-text { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* ───── FACTORS ───── */
+  .factors-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 20px 0;
+  }
+  .factor-card {
+    background: white;
+    border: 1px solid var(--sand3);
+    border-radius: 8px;
+    padding: 16px;
+    border-top: 3px solid var(--rust);
+    text-align: center;
+  }
+  .factor-icon { font-size: 24px; margin-bottom: 8px; display: block; }
+  .factor-name {
+    font-family: 'Amiri', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .factor-desc { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+
+  /* ───── RESULTS BOX ───── */
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .result-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 12px 14px;
+    background: white;
+    border: 1px solid var(--sand3);
+    border-radius: 8px;
+  }
+  .result-icon {
+    width: 28px; height: 28px;
+    background: rgba(39,174,96,0.12);
+    color: #27ae60;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+  .result-text { font-size: 13px; color: var(--ink2); line-height: 1.6; }
+
+  /* ───── EXAM BOX ───── */
+  .exam-box {
+    background: var(--ink);
+    color: var(--sand);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin: 40px 0 20px;
+  }
+  .exam-box h3 {
+    font-family: 'Amiri', serif;
+    font-size: 22px;
+    color: var(--gold2);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .exam-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .exam-list li {
+    font-size: 13.5px;
+    color: rgba(245,240,232,0.8);
+    padding: 6px 10px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 6px;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .exam-list li::before {
+    content: '←';
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* ───── SEPARATOR ───── */
+  .sep {
+    border: none;
+    border-top: 1px solid var(--sand3);
+    margin: 40px 0;
+  }
+
+  /* ───── FOOTER ───── */
+  footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 13px;
+    color: var(--muted);
+    border-top: 1px solid var(--sand3);
+    background: white;
+  }
+  footer .amiri { font-family: 'Amiri', serif; font-size: 16px; color: var(--ink); }
+
+  /* ───── RESPONSIVE ───── */
+  @media (max-width: 600px) {
+    .hero { padding: 40px 20px 36px; }
+    .types-row, .sn-grid, .exam-list, .factors-row { grid-template-columns: 1fr; }
+    .hero-stats { gap: 24px; }
+    .container { padding: 0 16px 60px; }
+  }
+
+  /* ───── ANIMATIONS ───── */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero > * { animation: fadeInUp 0.6s ease both; }
+  .hero-badge  { animation-delay: 0.1s; }
+  .hero h1     { animation-delay: 0.2s; }
+  .hero-sub    { animation-delay: 0.3s; }
+  .hero-divider{ animation-delay: 0.4s; }
+  .hero-stats  { animation-delay: 0.5s; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-badge">كلية التربية للطفولة المبكرة · جامعة القاهرة · 2026</div>
+  <h1>الفصل الأول<br><span>التربية الأسرية</span></h1>
+  <p class="hero-sub">د. دعاء علي محمود عطا الله · مدرس بقسم العلوم التربوية</p>
+  <div class="hero-divider"></div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="hero-stat-num">٨</span>
+      <span class="hero-stat-label">مجالات التربية</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">٤</span>
+      <span class="hero-stat-label">أنماط التربية الأسرية</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">٦</span>
+      <span class="hero-stat-label">وظائف التربية</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">٣</span>
+      <span class="hero-stat-label">أساليب التربية الأسرية</span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- SECTION 1: INTRO -->
+  <div class="section-header">
+    <div class="section-num">١</div>
+    <h2 class="section-title">مقدمة – التربية ظاهرة إنسانية</h2>
+  </div>
+
+  <p class="prose">
+    التربية ظهرت مع ظهور الإنسان على وجه الأرض وشعوره بكيانه باعتباره فرداً في جماعة. وبدأت في وسط مليء بالكائنات الحية المختلفة، وكان لابد له من الدخول في تنافس معها للحفاظ على بقائه. فأدرك أنه متميز عن باقي المخلوقات، وعليه أن يستغل هذا التميز بعقله لتحسين ظروف حياته.
+  </p>
+
+  <div class="highlight-box">
+    <span class="label">الفكرة الجوهرية</span>
+    <p>التفاعل المستمر بين الإنسان وبيئته – حيث يكتسب ويتعلم مهامه ويمارسها – هو ما نسميه <strong>التربية التي هي الحياة نفسها</strong>.</p>
+  </div>
+
+  <p class="prose">
+    وقد تطورت أساليب التربية مع تطور الإنسان، وأخذت أشكالاً مختلفة من حيث أغراضها وعواملها ووسائلها، ومن حيث استجابة الإنسان في أطواره المختلفة للعوامل المؤثرة فيه.
+  </p>
+
+  <hr class="sep">
+
+  <!-- SECTION 2: DEFINITION -->
+  <div class="section-header">
+    <div class="section-num">٢</div>
+    <h2 class="section-title">مفهوم التربية ومعناها</h2>
+  </div>
+
+  <p class="prose">يختلف مفهوم التربية من مجتمع لآخر ومن ثقافة لأخرى، وعلى الرغم من اختلافات المعنى إلا أنها جميعاً تنطوي على أبعاد مشتركة.</p>
+
+  <div class="types-row" style="margin-bottom:24px">
+    <div style="background:white;border:1px solid var(--sand3);border-radius:8px;padding:20px">
+      <div style="font-family:'Amiri',serif;font-size:17px;font-weight:700;color:var(--gold);margin-bottom:10px">المعنى اللغوي</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.7">مأخوذة من الفعل الثلاثي <strong style="color:var(--ink)">(ربا)</strong> وتعني الارتفاع والنمو والزيادة. يقال "ربوت في البادية" أي نشأت فيها. وتعني أيضاً <strong style="color:var(--ink)">(ربّ)</strong> أي أصلح الشيء وقوّمه.</p>
+    </div>
+    <div style="background:white;border:1px solid var(--sand3);border-radius:8px;padding:20px">
+      <div style="font-family:'Amiri',serif;font-size:17px;font-weight:700;color:var(--teal);margin-bottom:10px">المعنى الاصطلاحي</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.7">السعي لإيجاد <strong style="color:var(--ink)">التغيير المطلوب</strong> في الفرد وإيصاله إلى التكامل التدريجي والمستمر. وهي عملية تطبيع اجتماعي للفرد مع الجماعة وتعايش مع الثقافة.</p>
+    </div>
+  </div>
+
+  <!-- THINKERS -->
+  <p class="prose">أبدى كبار الفلاسفة والمفكرين آراءهم في مفهوم التربية:</p>
+  <div class="thinkers-grid">
+    <div class="thinker-card">
+      <div class="thinker-name">أفلاطون</div>
+      <div class="thinker-quote">التربية تضفي على الجسم والنفس كل جمال وكمال ممكن، وهي أساس بناء الدولة والمحافظة عليها.</div>
+    </div>
+    <div class="thinker-card">
+      <div class="thinker-name">جون ديوي</div>
+      <div class="thinker-quote">التربية هي الحياة نفسها وليست عملية إعداد للحياة. سماه "فيلسوف الخبرة".</div>
+    </div>
+    <div class="thinker-card">
+      <div class="thinker-name">هربرت سبنسر</div>
+      <div class="thinker-quote">التربية هي إعداد الفرد ليحيى حياة كاملة في كل جوانبها.</div>
+    </div>
+    <div class="thinker-card">
+      <div class="thinker-name">روسو</div>
+      <div class="thinker-quote">التربية تستمد من ثلاثة مصادر: الطبيعة والإنسان والأشياء. وتوافقها يصنع الإنسان السعيد.</div>
+    </div>
+    <div class="thinker-card">
+      <div class="thinker-name">بستالوتزي</div>
+      <div class="thinker-quote">هدف التربية هو النمو، ويجب منح كل الأطفال الفرص المتكافئة للتعليم.</div>
+    </div>
+    <div class="thinker-card">
+      <div class="thinker-name">الإسلام</div>
+      <div class="thinker-quote">التربية أداة للبناء المستمر تثمر بناء إنسان مفكر مؤمن ملتزم يعمل بتوجيهات الدين.</div>
+    </div>
+  </div>
+
+  <!-- TWO TYPES -->
+  <div class="section-header">
+    <div class="section-num">٣</div>
+    <h2 class="section-title">نوعا التربية</h2>
+  </div>
+
+  <div class="types-row">
+    <div class="type-card maqsood">
+      <span class="type-icon">🎓</span>
+      <div class="type-title">التربية المقصودة</div>
+      <p class="type-desc">الخبرة المتضمنة التعليم المقصود والمنظم علمياً. تتم داخل المؤسسات التعليمية (المدرسة – الحضانة) وفق خطة محددة وأهداف واضحة.</p>
+    </div>
+    <div class="type-card ghair">
+      <span class="type-icon">🌿</span>
+      <div class="type-title">التربية غير المقصودة</div>
+      <p class="type-desc">الخبرة المتضمنة السبل نحو تجدد الحياة الاجتماعية. تتم في الحياة اليومية دون تخطيط مسبق – من الأسرة، الشارع، والتجارب العملية.</p>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <span class="label">💡 مثال عملي</span>
+    <p>لما تشوف أبوك بيساعد الجار بدون ما يطلب منه – هتتعلم قيمة التعاون من غير ما حد يشرحلك! دي تربية <strong>غير مقصودة</strong>. أما درس القيم في المدرسة فده <strong>تربية مقصودة</strong>.</p>
+  </div>
+
+  <hr class="sep">
+
+  <!-- SECTION: IMPORTANCE -->
+  <div class="section-header">
+    <div class="section-num">٤</div>
+    <h2 class="section-title">أهمية التربية وخصائصها ووظائفها</h2>
+  </div>
+
+  <p class="prose"><strong>أهمية التربية</strong> تتجلى في كونها ركيزة بناء المجتمعات:</p>
+  <ul class="functions-list">
+    <li>
+      <div class="fn-num">أ</div>
+      <div class="fn-content">
+        <div class="fn-title">نقل التراث الثقافي</div>
+        <div class="fn-desc">كل جيل يبدأ من حيث انتهى الجيل السابق. المعارف والمهارات والاتجاهات تنتقل من جيل لجيل، فيقوم كل جيل بالإضافة والتطوير.</div>
+      </div>
+    </li>
+    <li>
+      <div class="fn-num">ب</div>
+      <div class="fn-content">
+        <div class="fn-title">ضرورة اجتماعية</div>
+        <div class="fn-desc">بقاء المجتمع يعتمد على نقل التراث الثقافي من جيل لجيل. الحياة الإنسانية تستمر وتجدد نفسها عبر هذا النقل.</div>
+      </div>
+    </li>
+    <li>
+      <div class="fn-num">ج</div>
+      <div class="fn-content">
+        <div class="fn-title">التطبيع الاجتماعي</div>
+        <div class="fn-desc">تعمل على تحويل الأعضاء الجدد (الأطفال) من مجرد كائنات بيولوجية إلى أعضاء فاعلين في الحياة الاجتماعية.</div>
+      </div>
+    </li>
+    <li>
+      <div class="fn-num">د</div>
+      <div class="fn-content">
+        <div class="fn-title">التكيف الاجتماعي</div>
+        <div class="fn-desc">تُكسب الفرد الصفات الإنسانية والمهارات التي تمكنه من التكيف – بتغيير البيئة لتناسب حاجاته وتغيير نفسه لتناسب البيئة.</div>
+      </div>
+    </li>
+    <li>
+      <div class="fn-num">هـ</div>
+      <div class="fn-content">
+        <div class="fn-title">النمو الإنساني</div>
+        <div class="fn-desc">توظيف الوسائل المختلفة لتحقيق إمكانيات النمو للطفل جسمانياً وعقلياً واجتماعياً، وتدعيم هذا النمو ورعايته.</div>
+      </div>
+    </li>
+    <li>
+      <div class="fn-num">و</div>
+      <div class="fn-content">
+        <div class="fn-title">التمييز والهوية القومية</div>
+        <div class="fn-desc">يشترك أفراد المجتمع في خصائص وسمات تميزهم عن مجتمع آخر، وتنتقل عبر التربية من جيل لجيل.</div>
+      </div>
+    </li>
+  </ul>
+
+  <p class="prose" style="margin-top:20px"><strong>خصائص التربية:</strong></p>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px">
+    <span style="padding:6px 14px;background:white;border:1px solid var(--sand3);border-radius:20px;font-size:13px;color:var(--muted)">إنسانية مكتسبة</span>
+    <span style="padding:6px 14px;background:white;border:1px solid var(--sand3);border-radius:20px;font-size:13px;color:var(--muted)">تعاونية اجتماعية</span>
+    <span style="padding:6px 14px;background:white;border:1px solid var(--sand3);border-radius:20px;font-size:13px;color:var(--muted)">شاملة ومرنة</span>
+    <span style="padding:6px 14px;background:white;border:1px solid var(--sand3);border-radius:20px;font-size:13px;color:var(--muted)">مستمرة لا تنتهي</span>
+    <span style="padding:6px 14px;background:white;border:1px solid var(--sand3);border-radius:20px;font-size:13px;color:var(--muted)">هادفة ومقصودة</span>
+    <span style="padding:6px 14px;background:white;border:1px solid var(--sand3);border-radius:20px;font-size:13px;color:var(--muted)">متغيرة ومتطورة</span>
+    <span style="padding:6px 14px;background:white;border:1px solid var(--sand3);border-radius:20px;font-size:13px;color:var(--muted)">تشاركية</span>
+    <span style="padding:6px 14px;background:white;border:1px solid var(--sand3);border-radius:20px;font-size:13px;color:var(--muted)">فردية واجتماعية</span>
+  </div>
+
+  <hr class="sep">
+
+  <!-- SECTION: DOMAINS -->
+  <div class="section-header">
+    <div class="section-num">٥</div>
+    <h2 class="section-title">مجالات التربية الثمانية</h2>
+  </div>
+
+  <p class="prose">تتعدد مجالات التربية لتغطي كل جوانب تكوين الإنسان، وفيما يلي تفصيل لكل مجال:</p>
+
+  <div class="domains-grid">
+    <div class="domain-card">
+      <div class="domain-icon" style="background:rgba(231,76,60,0.1)">💪</div>
+      <div class="domain-name">التربية الجسمية</div>
+      <div class="domain-desc">العقل السليم في الجسم السليم. الاهتمام بالصحة والنظافة والرياضة. جون لوك: الهواء الطلق والتمرين الجسمي دعائم الطفولة المبكرة.</div>
+    </div>
+    <div class="domain-card">
+      <div class="domain-icon" style="background:rgba(52,152,219,0.1)">🧠</div>
+      <div class="domain-name">التربية العقلية</div>
+      <div class="domain-desc">اكتساب المعلومات ونضج العقل وتوظيفه في الحياة. تنمية عادة التفكير وحرية التفكير والربط بين الأفكار.</div>
+    </div>
+    <div class="domain-card">
+      <div class="domain-icon" style="background:rgba(46,204,113,0.1)">🤝</div>
+      <div class="domain-name">التربية الاجتماعية</div>
+      <div class="domain-desc">تنمية الذكاء الاجتماعي وبناء علاقات سوية. إكساب سلوكيات التعاون والإيثار والنظام للاندماج الاجتماعي.</div>
+    </div>
+    <div class="domain-card">
+      <div class="domain-icon" style="background:rgba(155,89,182,0.1)">🎨</div>
+      <div class="domain-name">التربية الجمالية</div>
+      <div class="domain-desc">تنمية قدرات إدراك الجمال وتذوقه وإنتاجه. أفلاطون: نشأة الطفل في بيئة جمالية منذ نعومة أظفاره.</div>
+    </div>
+    <div class="domain-card">
+      <div class="domain-icon" style="background:rgba(26,188,156,0.1)">🌱</div>
+      <div class="domain-name">التربية البيئية</div>
+      <div class="domain-desc">وعي الفرد بموارد البيئة وكيفية استغلالها الأمثل والحفاظ عليها. تنمية اتجاهات احترام البيئة.</div>
+    </div>
+    <div class="domain-card">
+      <div class="domain-icon" style="background:rgba(241,196,15,0.1)">⚖️</div>
+      <div class="domain-name">التربية الخُلقية</div>
+      <div class="domain-desc">اكتساب المبادئ التي توجه السلوك. الأسرة هي المسؤول الأول. يكون بالقدوة والتدريب لا بالتلقين.</div>
+    </div>
+    <div class="domain-card">
+      <div class="domain-icon" style="background:rgba(230,126,34,0.1)">☪️</div>
+      <div class="domain-name">التربية الدينية</div>
+      <div class="domain-desc">تربية وجدان الطفل وجعل الحياة ذات قيمة ومعنى. الطفل يفهم من الدين ما هو واقعي ملموس يخاطب إدراكه الحسي.</div>
+    </div>
+    <div class="domain-card">
+      <div class="domain-icon" style="background:rgba(149,165,166,0.1)">💑</div>
+      <div class="domain-name">التربية الجنسية</div>
+      <div class="domain-desc">فهم الفرد لطبيعته البيولوجية وإعداده للحياة الاجتماعية والعائلية في المستقبل.</div>
+    </div>
+  </div>
+
+  <hr class="sep">
+
+  <!-- SECTION: FAMILY EDUCATION -->
+  <div class="section-header">
+    <div class="section-num">٦</div>
+    <h2 class="section-title">التربية الأسرية – المفهوم والأهداف</h2>
+  </div>
+
+  <div class="highlight-box">
+    <span class="label">التعريف</span>
+    <p>التربية الأسرية هي <strong>مجموعة السلوكيات والقيم والأخلاق التي تغرسها الأسرة في نفوس أبنائها</strong>. فالأسرة هي التي تكوّن النواة الأولى للإنسان في حياته الهادئة أو المضطربة، وهي اللبنة الأساسية في أي مجتمع سليم.</p>
+  </div>
+
+  <p class="prose">مفهوم التربية الأسرية من المفاهيم الشائعة في الثقافة المعاصرة، حيث يشمل جميع مجالات التربية ويمتد ليشمل مساعدة الأسرة على التعامل مع مستجدات الحاضر والمستقبل.</p>
+
+  <p class="prose"><strong>أهداف التربية الأسرية الرئيسية:</strong></p>
+
+  <ul class="functions-list">
+    <li>
+      <div class="fn-num">١</div>
+      <div class="fn-content">
+        <div class="fn-title">توعية المقبلين على الزواج</div>
+        <div class="fn-desc">تثقيف الجنسين بطبيعة أدوارهم من الخطوبة إلى الزواج إلى الإنجاب وما يتبعه من مسؤوليات نحو الطفل.</div>
+      </div>
+    </li>
+    <li>
+      <div class="fn-num">٢</div>
+      <div class="fn-content">
+        <div class="fn-title">الوعي بخصائص المراحل العمرية</div>
+        <div class="fn-desc">توعية الأسرة بالتكوين المعرفي والنفسي والجسمي للفرد في كل مرحلة عمرية، لأن لكل مرحلة خصائصها واحتياجاتها.</div>
+      </div>
+    </li>
+    <li>
+      <div class="fn-num">٣</div>
+      <div class="fn-content">
+        <div class="fn-title">معرفة الحاجات الفطرية للطفل</div>
+        <div class="fn-desc">تبصير الوالدين بأساليب إشباع الحاجات الفسيولوجية الأساسية (طعام – نوم – نظافة) وأثر عدم إشباعها على الصحة النفسية والجسمية.</div>
+      </div>
+    </li>
+    <li>
+      <div class="fn-num">٤</div>
+      <div class="fn-content">
+        <div class="fn-title">إشباع حاجة الطفل للمعرفة</div>
+        <div class="fn-desc">مساعدة الأسرة في إتاحة مساحة من الحرية والنشاط الذاتي، بعيداً عن التلقين، لتنمية قدراته وملكاته.</div>
+      </div>
+    </li>
+    <li>
+      <div class="fn-num">٥</div>
+      <div class="fn-content">
+        <div class="fn-title">تعميق قيم الانتماء</div>
+        <div class="fn-desc">دعم شعور الطفل بالانتماء للأسرة والمجتمع، والبعد عن كل ما يشعره بالنفور أو الإهمال أو التوبيخ المتكرر.</div>
+      </div>
+    </li>
+    <li>
+      <div class="fn-num">٦</div>
+      <div class="fn-content">
+        <div class="fn-title">الرعاية الصحية والبيئية</div>
+        <div class="fn-desc">توعية الأسرة بأهمية الرعاية الصحية والعادات اليومية الصحية والسلوكيات البيئية السليمة.</div>
+      </div>
+    </li>
+  </ul>
+
+  <hr class="sep">
+
+  <!-- SECTION: PATTERNS -->
+  <div class="section-header">
+    <div class="section-num">٧</div>
+    <h2 class="section-title">أنماط التربية الأسرية الأربعة</h2>
+  </div>
+
+  <p class="prose">تتباين أساليب الآباء في تربية أبنائهم، وقد حددها الكتاب في أربعة أنماط رئيسية:</p>
+
+  <div class="patterns-grid">
+    <!-- 1 -->
+    <div class="pattern-card p-sultawi">
+      <div class="pattern-stripe"></div>
+      <div class="pattern-body">
+        <div class="pattern-header">
+          <span class="pattern-badge">تجنب</span>
+          <span class="pattern-name">التربية السلطوية</span>
+        </div>
+        <p class="pattern-desc">يمنح هذا النوع السلطة المطلقة للأهل. شدة دائمة، مبالغة في العقاب، لا مجال للحوار أو النقاش.</p>
+        <div class="pattern-traits">
+          <span class="trait">مساحة ضيقة للحوار</span>
+          <span class="trait">شدة دائمة</span>
+          <span class="trait">عقاب بأنواعه</span>
+          <span class="trait">انعدام الثقة بالأطفال</span>
+          <span class="trait">توقعات عالية بلا مرونة</span>
+        </div>
+        <div class="pattern-effect">
+          <strong>الآثار السلبية:</strong> ضعف الثقة بالنفس · سلوك عدواني خارج المنزل · صعوبة الحياة الاجتماعية · قلق واكتئاب · خوف من الآخرين
+        </div>
+      </div>
+    </div>
+    <!-- 2 -->
+    <div class="pattern-card p-mutasahel">
+      <div class="pattern-stripe"></div>
+      <div class="pattern-body">
+        <div class="pattern-header">
+          <span class="pattern-badge">تجنب</span>
+          <span class="pattern-name">التربية المتساهلة</span>
+        </div>
+        <p class="pattern-desc">السماح للأطفال بفعل ما يريدون مع تقديم حد أدنى من التوجيه. الأهل أشبه بالأصدقاء منهم بالآباء.</p>
+        <div class="pattern-traits">
+          <span class="trait">قوانين معدومة</span>
+          <span class="trait">عطف وحنان زائد</span>
+          <span class="trait">لا عقاب</span>
+          <span class="trait">قرارات للأطفال</span>
+          <span class="trait">توقعات قليلة جداً</span>
+        </div>
+        <div class="pattern-effect">
+          <strong>الآثار السلبية:</strong> تدني الإنجاز · قرارات سيئة · ضعف إدارة الوقت · فشل أكاديمي واجتماعي · لا تحمل مسؤولية
+        </div>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="pattern-card p-mubta3d">
+      <div class="pattern-stripe"></div>
+      <div class="pattern-body">
+        <div class="pattern-header">
+          <span class="pattern-badge">خطر</span>
+          <span class="pattern-name">التربية المبتعدة (الإهمال)</span>
+        </div>
+        <p class="pattern-desc">لا نهج واضح لتهذيب الأطفال، نادراً ما يعبر الوالدان عن مشاعرهم، وقليل من الحوار بين الأهل والأطفال.</p>
+        <div class="pattern-traits">
+          <span class="trait">لا نهج واضح</span>
+          <span class="trait">ندرة التعبير العاطفي</span>
+          <span class="trait">حوار قليل</span>
+          <span class="trait">لا توقعات</span>
+          <span class="trait">عدم اكتراث</span>
+        </div>
+        <div class="pattern-effect">
+          <strong>الآثار السلبية:</strong> توتر وقلق مرتفع · بعد عاطفي · اعتماد كلي على الذات يؤدي للأخطاء · خطر الانحراف · لا يثق بالآخرين
+        </div>
+      </div>
+    </div>
+    <!-- 4 -->
+    <div class="pattern-card p-mu3tadel">
+      <div class="pattern-stripe"></div>
+      <div class="pattern-body">
+        <div class="pattern-header">
+          <span class="pattern-badge">✓ الأفضل</span>
+          <span class="pattern-name">التربية المعتدلة (الحازمة)</span>
+        </div>
+        <p class="pattern-desc">يُعرف أيضاً بالنمط الموثوق. قواعد واضحة + دفء وحب + ديمقراطية. يستجيب الوالدان لأطفالهما ويشرحان أسباب القرارات.</p>
+        <div class="pattern-traits">
+          <span class="trait">قواعد وتوجيه</span>
+          <span class="trait">دفء وحب</span>
+          <span class="trait">ديمقراطية</span>
+          <span class="trait">رعاية عند الفشل</span>
+          <span class="trait">ثقة بقدرات الأبناء</span>
+        </div>
+        <div class="pattern-effect">
+          <strong>النتائج الإيجابية:</strong> أطفال مسؤولون · ثقة بالنفس · تعاطف مع الآخرين · إنجاز أكاديمي ومهني · علاقات اجتماعية ناجحة
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="sep">
+
+  <!-- SECTION: METHODS -->
+  <div class="section-header">
+    <div class="section-num">٨</div>
+    <h2 class="section-title">أساليب التربية الأسرية</h2>
+  </div>
+
+  <p class="prose">ذكر الكتاب ثلاثة أساليب إيجابية في التربية الأسرية تعمل على تهذيب سلوك الأبناء:</p>
+
+  <div class="methods-row">
+    <div class="method-card">
+      <div class="method-num">١</div>
+      <div class="method-name">التربية بالتوجيه</div>
+      <div class="method-desc">التقرب من الأبناء لتوجيههم إلى الطريق الصحيح عبر الحوار الذي يبني الثقة والروابط الوجدانية والاحترام المتبادل.</div>
+    </div>
+    <div class="method-card">
+      <div class="method-num">٢</div>
+      <div class="method-name">التربية بالملاحظة</div>
+      <div class="method-desc">متابعة الأبناء من خلال أقوالهم وأفعالهم ومقارنتها بما تربوا عليه، والتصحيح عند الانحراف.</div>
+    </div>
+    <div class="method-card">
+      <div class="method-num">٣</div>
+      <div class="method-name">التربية بالقدوة</div>
+      <div class="method-desc">الأبناء يقلدون الآباء. على الآباء التصرف بأدب أمام أبنائهم وفعل ما يقولون، لأن فصال الأقوال عن الأفعال يؤثر كثيراً.</div>
+    </div>
+  </div>
+
+  <div class="warning-box">
+    <span class="label">⚠️ ملاحظة مهمة</span>
+    <p>العقاب جزء من الواجب التربوي للوالدين عند الحاجة، ولكن <strong>العقاب لا يعني الضرب المبرح أو أي شكل من أشكال التعنيف البالغ الضرر</strong>. للعقاب أنواع أخرى أكثر تأثيراً وأقل ضرراً.</p>
+  </div>
+
+  <hr class="sep">
+
+  <!-- SECTION: FUNCTIONS OF FAMILY EDUCATION -->
+  <div class="section-header">
+    <div class="section-num">٩</div>
+    <h2 class="section-title">وظائف التربية الأسرية</h2>
+  </div>
+
+  <div class="types-row">
+    <div style="background:white;border:1px solid var(--sand3);border-radius:8px;padding:18px">
+      <div style="font-family:'Amiri',serif;font-size:17px;font-weight:700;color:var(--gold);margin-bottom:8px">نقل التراث الثقافي</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.7">نقل الثقافة المجتمعية بعاداتها وتقاليدها وسلوكياتها إلى الأبناء. هذه الثقافة لا تنتقل بالوراثة، وإنما يُعلَّمها الأطفال في الأسرة.</p>
+    </div>
+    <div style="background:white;border:1px solid var(--sand3);border-radius:8px;padding:18px">
+      <div style="font-family:'Amiri',serif;font-size:17px;font-weight:700;color:var(--teal);margin-bottom:8px">نقل الأنماط السلوكية</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.7">وجود الطفل في الأسرة يجعله يتأثر بشكل مباشر بسلوكيات أفرادها، حتى يصبح سلوكه ردة فعل طبيعية كنتيجة للأمور التي تأثر بها.</p>
+    </div>
+    <div style="background:white;border:1px solid var(--sand3);border-radius:8px;padding:18px;grid-column:1/-1">
+      <div style="font-family:'Amiri',serif;font-size:17px;font-weight:700;color:var(--rust);margin-bottom:8px">التربية عملية نمو</div>
+      <p style="font-size:14px;color:var(--muted);line-height:1.7">الطفل يولد ضعيفاً من الناحية الاجتماعية والجسدية، فهو بحاجة إلى العناية والتربية من أجل نموه بشكل صحي ومتكامل.</p>
+    </div>
+  </div>
+
+  <hr class="sep">
+
+  <!-- SECTION: FACTORS -->
+  <div class="section-header">
+    <div class="section-num">١٠</div>
+    <h2 class="section-title">العوامل المؤثرة في التربية الأسرية</h2>
+  </div>
+
+  <div class="factors-row">
+    <div class="factor-card">
+      <span class="factor-icon">👴👶</span>
+      <div class="factor-name">عمر الوالدين</div>
+      <div class="factor-desc">كلما زاد الفارق العمري بين الأبناء ووالديهم كان من الصعب تحقيق التفاهم والتوافق داخل المنزل.</div>
+    </div>
+    <div class="factor-card">
+      <span class="factor-icon">🏥</span>
+      <div class="factor-name">الوضع الصحي</div>
+      <div class="factor-desc">الوضع الصحي للوالدين بأبعاده النفسية والجسمانية والعقلية يؤثر على الأسلوب التربوي المتبع معهم.</div>
+    </div>
+    <div class="factor-card">
+      <span class="factor-icon">📚</span>
+      <div class="factor-name">المستوى التعليمي</div>
+      <div class="factor-desc">يتفاوت المنظور الحياتي والطموح بين الناس وفقاً لمستواهم التعليمي، مما ينعكس على توفير البيئة الداعمة للأبناء.</div>
+    </div>
+  </div>
+
+  <hr class="sep">
+
+  <!-- SECTION: SPECIAL NEEDS -->
+  <div class="section-header">
+    <div class="section-num">١١</div>
+    <h2 class="section-title">الأطفال ذوو الاحتياجات الخاصة</h2>
+  </div>
+
+  <p class="prose">الكتاب يُعنى أساساً بتأهيل الطلاب للعمل مع أطفال ذوي الاحتياجات الخاصة، وفيما يلي تعريف المصطلح وخصائصه:</p>
+
+  <div class="info-box">
+    <span class="label">التعريف</span>
+    <p>ذوو الاحتياجات الخاصة هم الأشخاص الذين تصنفهم منظمة الصحة العالمية على أنهم <strong>أكثر الفئات تهميشاً في العالم</strong>، نتيجة وجود قصور في هيكل الجسم أو وظائف أعضائه، أو عوائق تحول دون المشاركة الطبيعية في الحياة.</p>
+  </div>
+
+  <p class="prose" style="margin-top:16px"><strong>خصائصهم الرئيسية:</strong></p>
+  <div class="sn-grid">
+    <div class="sn-card">
+      <div class="sn-title">صعوبات حركية</div>
+      <div class="sn-text">تأخر المشي عند الأطفال أو المشي البطيء، صعوبة في الحركة والقيام بالأنشطة اليومية.</div>
+    </div>
+    <div class="sn-card">
+      <div class="sn-title">صعوبات في النطق</div>
+      <div class="sn-text">تأخر الكلام والتحدث في الطفولة، أو صعوبة النطق نتيجة مشكلة في السمع.</div>
+    </div>
+    <div class="sn-card">
+      <div class="sn-title">بطء اكتساب المهارات</div>
+      <div class="sn-text">يستغرق اكتساب المهارات العادية كارتداء الملابس وتناول الطعام وقتاً أطول بكثير.</div>
+    </div>
+    <div class="sn-card">
+      <div class="sn-title">صعوبات في الذاكرة</div>
+      <div class="sn-text">صعوبة تذكر الأشياء والأحداث، وعدم القدرة على تنفيذ إجراءات في تسلسل محدد.</div>
+    </div>
+    <div class="sn-card">
+      <div class="sn-title">مشكلات سلوكية</div>
+      <div class="sn-text">نوبات غضب مفاجئة، وقد تكون مرتبطة باضطرابات صحية أخرى كاضطرابات المزاج.</div>
+    </div>
+    <div class="sn-card">
+      <div class="sn-title">صعوبة في التفكير المنطقي</div>
+      <div class="sn-text">يتطلب التفكير وتحليل الأشياء بطريقة منطقية جهداً كبيراً من ذوي الاحتياجات الخاصة.</div>
+    </div>
+  </div>
+
+  <hr class="sep">
+
+  <!-- SECTION: GOOD EDUCATION EFFECTS -->
+  <div class="section-header">
+    <div class="section-num">١٢</div>
+    <h2 class="section-title">آثار التربية السليمة على الطفل</h2>
+  </div>
+
+  <p class="prose">التربية السليمة تمكّن الطفل من:</p>
+
+  <div class="results-grid">
+    <div class="result-item">
+      <div class="result-icon">✓</div>
+      <div class="result-text">التفاعل الجيد مع الآخرين والتعاون معهم واحترامهم</div>
+    </div>
+    <div class="result-item">
+      <div class="result-icon">✓</div>
+      <div class="result-text">التفاعل الإيجابي مع مشاعر الآخرين والتعاطف معهم</div>
+    </div>
+    <div class="result-item">
+      <div class="result-icon">✓</div>
+      <div class="result-text">حسن التصرف عند مواجهة المشكلات والتعامل معها بأسلوب جيد</div>
+    </div>
+    <div class="result-item">
+      <div class="result-icon">✓</div>
+      <div class="result-text">إنشاء علاقات سليمة مع الأهل والأصدقاء وتكوين أسرة سليمة</div>
+    </div>
+    <div class="result-item">
+      <div class="result-icon">✓</div>
+      <div class="result-text">التفكير المنطقي الصحيح والابتعاد عن الاستنتاجات الخاطئة</div>
+    </div>
+    <div class="result-item">
+      <div class="result-icon">✓</div>
+      <div class="result-text">التعبير عن النفس بالشكل الواضح والسليم</div>
+    </div>
+    <div class="result-item">
+      <div class="result-icon">✓</div>
+      <div class="result-text">ضبط الرغبات والعواطف والتحكم في الانفعالات</div>
+    </div>
+    <div class="result-item">
+      <div class="result-icon">✓</div>
+      <div class="result-text">النجاح في الحياة العلمية والعملية والاجتماعية</div>
+    </div>
+  </div>
+
+  <!-- EXAM BOX -->
+  <div class="exam-box">
+    <h3>⭐ مراجعة سريعة قبل الامتحان</h3>
+    <ul class="exam-list">
+      <li>التربية = عملية التكيف والتفاعل بين الفرد وبيئته</li>
+      <li>نوعان: مقصودة (منظمة) وغير مقصودة (الخبرة)</li>
+      <li>٨ مجالات: جسمية، عقلية، اجتماعية، جمالية، بيئية، خلقية، دينية، جنسية</li>
+      <li>التربية الأسرية = قيم وسلوكيات تغرسها الأسرة</li>
+      <li>الأفضل: التربية المعتدلة (الحازمة)</li>
+      <li>الأخطر: الإهمال والتربية المبتعدة</li>
+      <li>٣ أساليب: التوجيه، الملاحظة، القدوة</li>
+      <li>٣ وظائف: نقل التراث، الأنماط السلوكية، النمو</li>
+      <li>٣ عوامل مؤثرة: عمر الوالدين، وضعهم الصحي، تعليمهم</li>
+      <li>ذوو الاحتياجات = قصور في الجسم أو عوائق المشاركة</li>
+    </ul>
+  </div>
+
+</main>
+
+<footer>
+  <p class="amiri">التربية الأسرية · الفصل الأول</p>
+  <p style="margin-top:6px">د. دعاء علي محمود عطا الله · كلية التربية للطفولة المبكرة · جامعة القاهرة · ٢٠٢٦</p>
+</footer>
+
+</body>
+</html>
